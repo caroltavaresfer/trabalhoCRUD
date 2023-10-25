@@ -9,6 +9,7 @@ $data = $conn->query($sql);
 //monta a tabela
 foreach ($data as $row) {
     echo '<tr>';
+    echo '<td>' . $row['nomeCompleto'] . '</td>';
     echo '<td>' . $row['email'] . '</td>';
     echo '<td>' . $row['cpf'] . '</td>';
     echo '<td>' . $row['endereco'] . '</td>';

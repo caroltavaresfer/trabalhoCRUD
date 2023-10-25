@@ -70,7 +70,16 @@ input[type="number"]::-webkit-outer-spin-button {
     justify-content: center;
     align-items: center;
     transition: width 0.5s, transform 0.5s;
+    /*border-collapse: separate;
+    border-spacing: 30px;*/
+    table-layout: auto;
 }
+#tabela th, #table td{
+    /*border: 1px solid black;
+    padding: 60px;*/
+    word-wrap: break-word;
+}
+
 #tabela.move {
     transform: translateX(-30%);
 }

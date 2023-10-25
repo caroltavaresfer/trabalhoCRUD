@@ -63,7 +63,7 @@
                 <label for="floatingSelect">Numero de parcelas</label>
             </div>
 
-            <input type="button" class="btn btn-outline-primary mt-3" value="Salvar">
+            <input type="submit" class="btn btn-outline-primary mt-3" name="Salvar" value="Salvar">
         </div>
     </div>
     </section>
@@ -83,15 +83,16 @@
 
     <div id="tabela">
         <div id="cadastros">
-        <table border="1">
+        <table class= table table-striped>
             <thead>
                 <tr>
+                    <th>Nome Completo</th>
                     <th>Email</th>
                     <th>CPF</th>
                     <th>Endereço</th>
-                    <th>Data de Nascimento</th>
-                    <th>Valor Total da Compra</th>
-                    <th>Número da Parcela</th>
+                    <th>Data Nascimento</th>
+                    <th>Valor Total Compra</th>
+                    <th>Número de Parcelas</th>
                 </tr>
             </thead>
                 <?php
