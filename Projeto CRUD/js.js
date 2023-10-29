@@ -1,19 +1,56 @@
 
-const mostrarFormularioBtn = document.getElementById('mostrarFormulario');
-const formularioDiv = document.getElementById('form_ad');
+const mostrarFormularioBtn_ad = document.getElementById('mostrarFormulario_ad');
+const mostrarFormularioBtn_ed = document.getElementById('mostrarFormulario_ed');
+const formularioadDiv = document.getElementById('form_ad');
+const formularioedDiv = document.getElementById('form_ed');
 const tabelaDiv = document.getElementById('tabela');
 const headertableDIV =document.getElementById('headertable')
+const fecharFormulario_adBtn = document.getElementById('fecharFormulario_ad');
+const fecharFormulario_edBtn = document.getElementById('fecharFormulario_ed');
 
-mostrarFormularioBtn.addEventListener('click', () => {
+
+mostrarFormularioBtn_ad.addEventListener('click', () => {
     
-    if (formularioDiv.style.display === 'none'&&tabelaDiv.style.width==='80%') {
-        formularioDiv.style.display = 'block';
+    if (formularioadDiv.style.display === 'none'&&tabelaDiv.style.width==='80%') {
+        formularioadDiv.style.display = 'block';
         tabelaDiv.style.width='60%';
         headertableDIV.style.width='60%'
-        tabelaDiv.classList.add('move');//para mover para o lado
+        tabelaDiv.classList.add('move');
         headertableDIV.classList.add('move');
     } else {
-        formularioDiv.style.display = 'none';
+        formularioadDiv.style.display = 'none';
+        tabelaDiv.style.width='80%';
+        headertableDIV.style.width='80%'
+        tabelaDiv.classList.remove('move');
+        headertableDIV.classList.remove('move');
+    }
+});
+
+fecharFormulario_adBtn.addEventListener('click', () => {
+    formularioadDiv.style.display = 'none';
+    tabelaDiv.style.width = '80%';
+    headertableDIV.style.width = '80%';
+    tabelaDiv.classList.remove('move');
+    headertableDIV.classList.remove('move');
+});
+fecharFormulario_edBtn.addEventListener('click', () => {
+    formularioedDiv.style.display = 'none';
+    tabelaDiv.style.width = '80%';
+    headertableDIV.style.width = '80%';
+    tabelaDiv.classList.remove('move');
+    headertableDIV.classList.remove('move');
+});
+
+mostrarFormularioBtn_ed.addEventListener('click', () => {
+    
+    if (formularioedDiv.style.display === 'none'&&tabelaDiv.style.width==='80%') {
+        formularioedDiv.style.display = 'block';
+        tabelaDiv.style.width='60%';
+        headertableDIV.style.width='60%'
+        tabelaDiv.classList.add('move');
+        headertableDIV.classList.add('move');
+    } else {
+        formularioedDiv.style.display = 'none';
         tabelaDiv.style.width='80%';
         headertableDIV.style.width='80%'
         tabelaDiv.classList.remove('move');

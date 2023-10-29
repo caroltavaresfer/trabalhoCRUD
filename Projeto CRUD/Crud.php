@@ -20,50 +20,106 @@
                 <h4>Adicionando novo Cadastro</h4>
             </div>
         </header>
-        <div id="inputs">
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInput" placeholder="username">
-                <label for="floatingInput">Nome completo</label>
+        <div class="inputs">
+            <div class="a">
+                <input type="text" placeholder=" ">
+                <label>Nome completo</label>
             </div>
 
-            <div class="form-floating mb-3">
-                <input type="number" class="form-control" id="floatingInput" placeholder="number">
-                <label for="floatingInput">CPF </label>
+            <div class="a">
+                <input type="number" name="cpf" placeholder=" ">
+                <label>CPF </label>
             </div>
 
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInput" placeholder="adress">
-                <label for="floatingInput">Endereço </label>
+            <div class="a" >
+                <input type="text" name="endereço" placeholder=" ">
+                <label>Endereço </label>
             </div>
 
-            <div class="form-floating mb-3">
-                <input type="date" class="form-control" id="floatingInput" placeholder="date">
-                <label for="floatingInput">Data de nascimento </label>
+            <div class="a" >
+                <input type="date" placeholder=" ">
             </div>
 
-            <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Email</label>
+            <div class="a" >
+                <input type="email" name="email" placeholder=" ">
+                <label>Email</label>
             </div>
 
-            <div class="input-group mb-3">
-                <span class="input-group-text">Valor da Compra: $</span>
-                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-                <span class="input-group-text">.00</span>
+            <div class="a" >
+                <input type="number" name="valor" placeholder="">
+                <label>Valor da Compra:</label>
             </div>
 
-            <div class="form-floating">
-                <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+            <div class="a" >
+                <span >Numero de parcelas</span>
+                <select>
                     <option selected>Parcelas</option>
-                    <option value="1">2x</option>
-                    <option value="2">4x</option>
-                    <option value="3">6x</option>
-                    <option value="4">8x</option>
+                    <option value="1">0x</option>
+                    <option value="2">2x</option>
+                    <option value="3">4x</option>
+                    <option value="4">6x</option>
+                    <option value="5">8x</option>
                 </select>
-                <label for="floatingSelect">Numero de parcelas</label>
             </div>
 
             <input type="submit" class="btn btn-outline-primary mt-3" name="Salvar" value="Salvar">
+            <input type="button" class="btn btn-outline-secondary mt-3" id="fecharFormulario_ad" value="Fechar">
+
+        </div>
+    </div>
+    </section>
+                                    <!--Forumulário_Editar-->
+    <section id="formulário_ed">
+    <div id="form_ed" style="display: none;">
+        <header>
+            <div id="headerForm">
+                <h4>Editando Cadastro</h4>
+            </div>
+        </header>
+        <div class="inputs">
+            <div class="a">
+                <input type="text" placeholder=" ">
+                <label>Nome completo</label>
+            </div>
+
+            <div class="a">
+                <input type="number" name="cpf" placeholder=" ">
+                <label>CPF </label>
+            </div>
+
+            <div class="a" >
+                <input type="text" name="endereço" placeholder=" ">
+                <label>Endereço </label>
+            </div>
+
+            <div class="a" >
+                <input type="date" placeholder=" ">
+            </div>
+
+            <div class="a" >
+                <input type="email" name="email" placeholder=" ">
+                <label>Email</label>
+            </div>
+
+            <div class="a" >
+                <input type="number" name="valor" placeholder="">
+                <label>Valor da Compra:</label>
+            </div>
+
+            <div class="a" >
+                <span >Numero de parcelas</span>
+                <select>
+                    <option selected>Parcelas</option>
+                    <option value="1">0x</option>
+                    <option value="2">2x</option>
+                    <option value="3">4x</option>
+                    <option value="4">6x</option>
+                    <option value="5">8x</option>
+                </select>
+            </div>
+
+            <input type="submit" class="btn btn-outline-primary mt-3" name="Salvar" value="Salvar">
+            <input type="button" class="btn btn-outline-secondary mt-3" id="fecharFormulario_ed" value="Fechar">
         </div>
     </div>
     </section>
@@ -74,8 +130,8 @@
             <h4>Cadastros salvos</h4>
                                     <!-- Botões-->
             <div id="grupo-botao">
-                <button type="button" class="btn btn-outline-info"id="mostrarFormulario">Adicionar</button>
-                <button type="button" class="btn btn-outline-warning">Editar</button>
+                <button type="button" class="btn btn-outline-info" id="mostrarFormulario_ad">Adicionar</button>
+                <button type="button" class="btn btn-outline-warning" id="mostrarFormulario_ed">Editar</button>
                 <button type="button" class="btn btn-outline-danger">Deletar</button>
             </div>
         </div>

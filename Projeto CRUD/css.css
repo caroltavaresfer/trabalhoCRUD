@@ -38,6 +38,22 @@ body{
     z-index: 999;
     
 }
+#form_ed {
+    width: 23%;
+    min-width: 195px;
+    margin-top: 0.20em;
+    padding: 0;
+    border: 1px solid linear-gradient(to bottom,#9F44D3,#E2B0FF);
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    transition: width 0.5s;
+    position:absolute;
+    top: 49%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    
+}
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -45,10 +61,53 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 0; /* Opcional - ajuste a margem conforme necessário */
 }
 
-
-#inputs {
+.inputs{
     padding: 1.25em;
+    position: relative;
 }
+.a{
+    margin-bottom:4%;
+    display: block;
+}
+input{
+    border:solid 1.5px #E2B0FF;
+    border-radius: 1rem;
+    background: none;
+    padding: 1rem;
+    font-size: 1rem;
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+label{
+    position: absolute;
+    left:10%;
+    pointer-events: none;
+    transform: translateY(1rem);
+    transition: 150ms cubic-bezier(0.4,0,0.2,1);
+}
+input:focus{
+    outline: none;
+    border: 1.5px solid #578cdd;
+}
+input:focus ~ label{
+    transform: translateY(-50%)scale(0.8);
+    background-color: #f9f9f9;
+    padding: 0 0.2em;
+    color: #578cdd;
+}
+.inputs input:not(:placeholder-shown) + label {
+    transform: translateY(-50%) scale(0.8);
+    background-color: #f9f9f9;
+    padding: 0 0.2em;
+    color: #578cdd;
+}
+select{
+    border:solid 1.5px #E2B0FF;
+    border-radius: 1rem;
+    background: none;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
 /* Estilos para o cabeçalho da div do formulário */
 #headerForm {
     background-color: #578cdd;
