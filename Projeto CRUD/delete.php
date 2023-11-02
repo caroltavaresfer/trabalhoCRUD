@@ -1,20 +1,21 @@
 <?php
-// Verifica se o formulário foi submetido
-if(isset($_GET['id'])){
+include 'conectDB.php';
 
-//chama arquivo de conexão com o banco
-require 'conectDB.php';
+// Verifica se um CPF foi passado via GET
+if (isset($_GET['cpf']) && !empty($_GET['cpf'])) {
+    $cpf = $_GET['cpf'];
 
-/********************************************************************************************************************************
- * ************************************************  IMPORTANTE *****************************************************************
- * 
- *       Verificar como iremos selecionar o fulaninho para excluir, se vai ser por tela ou alguma função do JavaScript 
- * 
- * ******************************************************************************************************************************
-*/
-$id = $_GET['id'];
+    // Deleta o registro baseado no CPF
+    $sql = "DELETE FROM clientes WHERE cpf = '$cpf'";
 
-    // Consulta SQL para excluir o cliente com base no ID
-    $sql = "DELETE FROM clientes WHERE id = $id";
+    if ($conn->query($sql) === TRUE) {
+        echo '<script>alert("Registro excluído com sucesso!"); window.location.href = "Crud.php";</script>';
+    } else {
+        echo '<script>alert("Erro ao excluir o registro: ' . $conn->error . '"); window.location.href = "Crud.php";</script>';
+    }
+} else {
+    echo '<script>alert(""CPF do registro não fornecido"); window.location.href = "Crud.php";</script>';
 }
+
+$conn->close();
 ?>
