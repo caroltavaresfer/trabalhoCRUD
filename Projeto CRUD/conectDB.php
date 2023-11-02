@@ -19,5 +19,5 @@ $conn = new mysqli($servername, $username, $password, $database);
 //Verifica status da conexão
 if ($conn->connect_error) {
     die("Erro na conexão: " . $conn->connect_error); //'die' é para encerrar a execução do programa
-} 
+}
 ?>
